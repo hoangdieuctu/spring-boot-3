@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:demo
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
